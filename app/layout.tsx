@@ -12,10 +12,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html lang='en'>
 			<body className='relative'>
-				<div className='bg-main bg-no-repeat bg-cover h-screen'>
-					<Header />
-					{children}
-				</div>
+				<Header />
+				{children}
 			</body>
 		</html>
 	);

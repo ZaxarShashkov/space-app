@@ -27,6 +27,9 @@ module.exports = {
 			backgroundImage: {
 				pattern: "url('/pattern.png')",
 				main: "url('/background-home-desktop.jpg')",
+				destination: "url('/background-destination-desktop.jpg')",
+				crew: "url('/background-crew-desktop.jpg')",
+				technology: "url('/background-technology-desktop.jpg')",
 			},
 		},
 	},
