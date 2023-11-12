@@ -6,7 +6,7 @@ type Props = {};
 
 const Header = (props: Props) => {
 	return (
-		<header className='relative flex justify-between items-center pt-8 z-10'>
+		<header className='relative flex justify-between items-center pt-8 z-10 '>
 			<div className='ml-8'>
 				<Image
 					src='/logo.svg'
@@ -16,7 +16,7 @@ const Header = (props: Props) => {
 					className='object-contain'
 				/>
 			</div>
-			<nav className='flex justify-center items-center min-w-[830px] h-[93px] bg-slate-600 '>
+			<nav className='flex justify-center items-center min-w-[830px] h-[93px] bg-header-bg backdrop-blur-[42px] '>
 				<ul className='flex justify-center gap-12 text-base text-white'>
 					<Link href='/'>
 						<li>

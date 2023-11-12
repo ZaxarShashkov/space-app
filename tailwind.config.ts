@@ -17,7 +17,7 @@ module.exports = {
 					DEFAULT: '#0B0D17',
 					100: '#F5F8FF',
 				},
-				'secondary-orange': '#f79761',
+				'header-bg': '#FFFFFF0A',
 				'light-white': {
 					DEFAULT: 'rgba(59,60,152,0.03)',
 					100: 'rgba(59,60,152,0.02)',
