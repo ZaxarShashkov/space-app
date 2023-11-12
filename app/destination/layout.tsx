@@ -1,3 +1,4 @@
+'use server';
 import { descriptionPlanet } from '@/constants';
 import Link from 'next/link';
 

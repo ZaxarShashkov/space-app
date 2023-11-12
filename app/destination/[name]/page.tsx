@@ -25,8 +25,14 @@ const PlanetPage = async ({ params: { name } }: Props) => {
 	const planet = await getData(name);
 	return (
 		<div className='grid grid-cols-2 gap-[257px] text-white '>
-			<div className=''>
-				<Image src={planet.href} alt={planet.name} width={445} height={445} />
+			<div className='object-contain'>
+				<Image
+					src={planet.href}
+					alt={planet.name}
+					width={445}
+					height={445}
+					className='object-contain'
+				/>
 			</div>
 			<div className='w-[447px]'>
 				<p className='text-[100px]'>{planet?.name}</p>
