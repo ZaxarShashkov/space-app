@@ -23,7 +23,7 @@ const Header = (props: Props) => {
 							<span className='font-bold'>00</span> HOME
 						</li>
 					</Link>
-					<Link href='/destination'>
+					<Link href='/destination/Moon'>
 						<li>
 							<span className='font-bold'>01</span> DESTINATION
 						</li>

@@ -17,7 +17,7 @@ async function getData(name: string) {
 export const generateStaticParams = async () => {
 	const planet: Planet[] = await descriptionPlanet;
 	return planet.map((planet: Planet) => ({
-		path: planet.name,
+		slug: planet.name,
 	}));
 };
 
@@ -27,7 +27,9 @@ const PlanetPage = async ({ params: { name } }: Props) => {
 		<div className='grid grid-cols-2 gap-[257px] text-white '>
 			<div className='object-contain'>
 				<Image
+					// @ts-ignore
 					src={planet.href}
+					// @ts-ignore
 					alt={planet.name}
 					width={445}
 					height={445}
