@@ -24,7 +24,7 @@ export const generateStaticParams = async () => {
 const PlanetPage = async ({ params: { name } }: Props) => {
 	const planet = await getData(name);
 	return (
-		<div className='grid grid-cols-2 gap-[257px] text-white '>
+		<div className='flex justify-around text-white '>
 			<div className='object-contain'>
 				<Image
 					// @ts-ignore
@@ -36,7 +36,7 @@ const PlanetPage = async ({ params: { name } }: Props) => {
 					className='object-contain'
 				/>
 			</div>
-			<div className='w-[447px]'>
+			<div className='w-[450px] ml-[280px]'>
 				<p className='text-[100px]'>{planet?.name}</p>
 				<p>{planet?.description}</p>
 				<div className='mt-[83px] flex gap-[51px]'>
