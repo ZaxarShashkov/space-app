@@ -7,3 +7,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.flex-around {
+  @apply flex justify-around items-center lg:mt-16 lg:flex-row md:flex-col lg:text-left md:text-center md:mt-10;
+}
+
+.flex-center {
+  @apply flex items-center justify-center
+}
+
+.text-large-bold {
+  @apply text-[150px] font-bold leading-normal
+}
