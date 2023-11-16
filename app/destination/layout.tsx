@@ -5,16 +5,16 @@ import Link from 'next/link';
 
 const DestinationLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
-		<div className='bg-destination bg-cover h-screen absolute top-0 bottom-0 left-0 right-0'>
+		<div className='lg:bg-destination md:bg-destinationTablet xs:bg-destinationMobile bg-cover lg:h-screen lg:overflow-hidden'>
 			<Header />
-			<div className='flex justify-evenly'>
-				<div className='mt-[50px]'>
+			<div className='lg:grid lg:grid-cols-2 mx-[70px] xs:flex xs:flex-col items-center justify-center'>
+				<div className='mt-[30px]'>
 					<p className='text-[28px] text-white'>
 						<span className='font-bold'>01 </span>
 						PICK YOUR DESTINATION
 					</p>
 				</div>
-				<div className='text-white flex gap-[36px] mt-[100px] mr-[80px]'>
+				<div className='text-white flex gap-[36px] mt-[70px]'>
 					{descriptionPlanet.map((planet) => (
 						<ul key={planet.name}>
 							<li>
@@ -24,7 +24,7 @@ const DestinationLayout = ({ children }: { children: React.ReactNode }) => {
 					))}
 				</div>
 			</div>
-			<div className='flex justify-around'>{children}</div>
+			<>{children}</>
 		</div>
 	);
 };

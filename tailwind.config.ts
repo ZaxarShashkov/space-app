@@ -8,14 +8,13 @@ module.exports = {
 	mode: 'jit',
 	theme: {
 		screens: {
-			'xs': '350px',
-			'sm': '640px',
-			'md': '768px',
-			'lg': '1024px',
-			'xl': '1280px',
+			xs: '350px',
+			sm: '640px',
+			md: '768px',
+			lg: '1024px',
+			xl: '1280px',
 			'2xl': '1536px',
-			
-		  },
+		},
 		extend: {
 			fontFamily: {
 				inter: ['Inter', 'sans-serif'],
@@ -39,6 +38,8 @@ module.exports = {
 				mainTablet: "url('/background-home-tablet.jpg')",
 				mainMobile: "url('/background-home-mobile.jpg')",
 				destination: "url('/background-destination-desktop.jpg')",
+				destinationTablet: "url('/background-destination-tablet.jpg')",
+				destinationMobile: "url('/background-destination-desktop.jpg')",
 				crew: "url('/background-crew-desktop.jpg')",
 				technology: "url('/background-technology-desktop.jpg')",
 			},

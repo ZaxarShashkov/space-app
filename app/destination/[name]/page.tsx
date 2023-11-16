@@ -24,23 +24,23 @@ export const generateStaticParams = async () => {
 const PlanetPage = async ({ params: { name } }: Props) => {
 	const planet = await getData(name);
 	return (
-		<div className='flex justify-around text-white '>
-			<div className='object-contain'>
+		<div className='lg:grid lg:grid-cols-2 mx-[70px] text-white xs:flex xs:flex-col justify-center'>
+			<div className='object-contain mt-10 xs:flex  justify-center '>
 				<Image
 					// @ts-ignore
 					src={planet.href}
 					// @ts-ignore
 					alt={planet.name}
-					width={445}
-					height={445}
+					width={400}
+					height={409}
 					className='object-contain'
 				/>
 			</div>
-			<div className='w-[450px] ml-[280px]'>
+			<div className='xs:flex xs:flex-col  xs:items-center lg:items-start'>
 				<p className='text-[100px]'>{planet?.name}</p>
-				<p>{planet?.description}</p>
-				<div className='mt-[83px] flex gap-[51px]'>
-					<div className='flex flex-col gap-3'>
+				<p className=' lg:px-0 xs:px-[100px]'>{planet?.description}</p>
+				<div className='lg:mt-[30px] flex gap-[51px] xs:mt-[70px] lg:mb-0 xs:mb-[50px]'>
+					<div className='flex flex-col gap-3 '>
 						<p>AVG. DISTANCE</p>
 						<p>{planet?.avgDistance}</p>
 					</div>
