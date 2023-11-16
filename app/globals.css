@@ -9,7 +9,7 @@
 }
 
 .flex-around {
-  @apply flex justify-around items-center lg:mt-16 lg:flex-row md:flex-col lg:text-left md:text-center md:mt-10;
+  @apply flex justify-around items-center lg:mt-16 lg:flex-row  xs:flex-col xs:text-center xs:mt-[106px];
 }
 
 .flex-center {
