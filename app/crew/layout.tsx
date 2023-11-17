@@ -1,13 +1,13 @@
 import Header from '@/components/Header';
+import { crew } from '@/constants';
+import Link from 'next/link';
 
 const CrewLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
-		<div className='bg-crew  bg-cover h-screen'>
+		<div className='bg-crew  bg-cover h-screen lg:overflow-hidden'>
 			<Header />
-			<p className='text-white mt-[75px] ml-[165px] text-[28px]'>
-				<span className='opacity-25 pr-[24px]'>02 </span>MEET YOUR CREW
-			</p>
-			{children}
+			<div className=''>{children}</div>
+			
 		</div>
 	);
 };
