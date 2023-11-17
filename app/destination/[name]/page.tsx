@@ -3,14 +3,16 @@ import { Planet } from '@/interfaces/Planet';
 import Image from 'next/image';
 import React from 'react';
 
-type Props = {
+type PlanetPageProps = {
 	params: {
 		name: string;
 	};
 };
 
 async function getData(name: string) {
-	const response = descriptionPlanet.find((planet) => planet.name === name);
+	const response = await descriptionPlanet.find(
+		(planet) => planet.name.toLowerCase() === name.toLowerCase()
+	);
 	return response;
 }
 
@@ -21,7 +23,7 @@ export const generateStaticParams = async () => {
 	}));
 };
 
-const PlanetPage = async ({ params: { name } }: Props) => {
+const PlanetPage = async ({ params: { name } }: PlanetPageProps) => {
 	const planet = await getData(name);
 	return (
 		<div className='lg:grid lg:grid-cols-2 mx-[70px] text-white xs:flex xs:flex-col justify-center'>
