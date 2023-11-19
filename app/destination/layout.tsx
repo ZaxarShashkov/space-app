@@ -1,9 +1,12 @@
-'use server';
+'use client';
 import Header from '@/components/Header';
 import { descriptionPlanet } from '@/constants';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const DestinationLayout = ({ children }: { children: React.ReactNode }) => {
+	const pathname = usePathname();
+
 	return (
 		<div className='lg:bg-destination md:bg-destinationTablet xs:bg-destinationMobile bg-cover lg:h-screen lg:overflow-hidden'>
 			<Header />
@@ -18,7 +21,15 @@ const DestinationLayout = ({ children }: { children: React.ReactNode }) => {
 					{descriptionPlanet.map((planet) => (
 						<ul key={planet.name}>
 							<li>
-								<Link href={`/destination/${planet.name}`}>{planet.name}</Link>
+								<Link
+									href={`/destination/${planet.name}`}
+									className={`${
+										pathname === `/destination/${planet.name}`
+											? 'border-b-2'
+											: 'border-b-0'
+									}`}>
+									{planet.name}
+								</Link>
 							</li>
 						</ul>
 					))}
