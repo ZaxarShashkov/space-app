@@ -1,8 +1,12 @@
+'use client';
 import Header from '@/components/Header';
 import { technology } from '@/constants';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const TechnologyLayout = ({ children }: { children: React.ReactNode }) => {
+	const pathname = usePathname();
+	console.log(pathname);
 	return (
 		<div className='bg-technology  bg-cover h-screen'>
 			<Header />
@@ -19,16 +23,18 @@ const TechnologyLayout = ({ children }: { children: React.ReactNode }) => {
 								<li key={link.title}>
 									<Link
 										href={`/technology/${link.slug}`}
-										className='flex items-center justify-center w-[80px] h-[80px] rounded-[50%] bg-white'>
-										<span className='text-[32px] text-black'>{i + 1}</span>
+										className={`flex items-center justify-center w-[80px] h-[80px] rounded-[50%] ${
+											pathname === `/technology/${link.slug}`
+												? 'border-2 border-slate-600  text-white '
+												: 'bg-white text-black'
+										}`}>
+										<span className='text-[32px] opacity-100'>{i + 1}</span>
 									</Link>
 								</li>
 							);
 						})}
 					</ul>
 				</div>
-				{/* <div className=''>grid grid-cols-[200px_minmax(900px,_1fr)_100px]</div>
-				<div className=''>grid grid-cols-[200px_minmax(900px,_1fr)_100px]</div> */}
 				{children}
 			</div>
 		</div>

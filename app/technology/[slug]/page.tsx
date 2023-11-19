@@ -25,22 +25,21 @@ export const generateStaticParams = async () => {
 
 const TechnologyPage = async ({ params: { slug } }: TechnologyPageProps) => {
 	const technologies = await getData(slug);
-	console.log(technologies);
 	return (
 		<>
 			<div className=''>
-				<p>THE TERMINOLOGY…</p>
-				<p>{technologies?.title}</p>
-				<p>{technologies?.descr}</p>
+				<p className='text-main-text'>THE TERMINOLOGY…</p>
+				<p className='text-[56px] my-3'>{technologies?.title}</p>
+				<p className='text-[18px] text-main-text'>{technologies?.descr}</p>
 			</div>
-			<div className='flex justify-end'>
+			<div className='flex justify-end mt-[-50px]'>
 				<Image
 					//@ts-ignore
 					src={technologies?.href}
 					//@ts-ignore
 					alt={technologies?.title}
-					height={550}
-					width={400}
+					height={415}
+					width={427}
 					className='object-center'
 				/>
 			</div>
