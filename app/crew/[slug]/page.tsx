@@ -6,24 +6,24 @@ import React from 'react';
 
 type CrewPageProps = {
 	params: {
-		post: string;
+		slug: string;
 	};
 };
 
-async function getData(post: string) {
-	const response = await crew.find((human) => human.post.toLowerCase() === post?.toLowerCase());
+async function getData(slug: string) {
+	const response = await crew.find((human) => human.slug.toLowerCase() === slug?.toLowerCase());
 	return response;
 }
 
 export const generateStaticParams = async () => {
 	const people: Crew[] = await crew;
 	return people.map((human: Crew) => ({
-		slug: human.post,
+		slug: human.slug,
 	}));
 };
 
-const CrewPage = async ({ params: { post } }: CrewPageProps) => {
-	const team = await getData(post);
+const CrewPage = async ({ params: { slug } }: CrewPageProps) => {
+	const team = await getData(slug);
 
 	return (
 		<div className='grid grid-cols-2 text-white justfy-center mx-[100px] mt-[50px] '>
@@ -35,13 +35,15 @@ const CrewPage = async ({ params: { post } }: CrewPageProps) => {
 				<p className='mt-4 text-[56px] uppercase'>{team?.name}</p>
 				<p className='mt-[27px] text-main-text'>{team?.descr}</p>
 
-				{crew?.map((link) => (
-					<ul>
+				<ul className='flex gap-5 mt-10'>
+					{crew?.map((link) => (
 						<li>
-							<Link href={`/crew/${link.post}`}>{link.post}</Link>
+							<Link
+								href={`/crew/${link.slug}`}
+								className=' block w-[15px] h-[15px] rounded-[50%] bg-white'></Link>
 						</li>
-					</ul>
-				))}
+					))}
+				</ul>
 			</div>
 			<div className='object-contain flex justify-center lg:mt-[65px]'>
 				<Image

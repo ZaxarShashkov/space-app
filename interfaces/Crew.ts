@@ -3,4 +3,5 @@ export interface Crew {
 	name: string;
 	descr: string;
 	href: string;
+	slug: string;
 }
