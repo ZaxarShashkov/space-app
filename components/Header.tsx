@@ -33,8 +33,7 @@ const Header = (props: Props) => {
 							<span className='font-bold'>02</span> CREW
 						</li>
 					</Link>
-
-					<Link href='technology'>
+					<Link href='/technology/Launch'>
 						<li>
 							<span className='font-bold'>03</span> TECHNOLOGY
 						</li>

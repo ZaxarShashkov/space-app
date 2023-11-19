@@ -26,9 +26,6 @@ export const generateStaticParams = async () => {
 const CrewPage = async ({ params: { slug } }: CrewPageProps) => {
 	const team = await getData(slug);
 
-	crew.map((link) => {
-		console.log(link.slug, 'link');
-	});
 	return (
 		<div className='grid grid-cols-2 text-white justfy-center mx-[100px] mt-[50px] '>
 			<div className=''>
