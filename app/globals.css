@@ -9,7 +9,7 @@
 }
 
 .flex-around {
-  @apply flex justify-around items-center lg:mt-16 lg:flex-row  xs:flex-col xs:text-center xs:mt-[106px];
+  @apply flex justify-around items-center lg:mt-16 lg:flex-row xs:flex-col xs:text-center xs:mt-[106px];
 }
 
 .flex-center {
@@ -17,5 +17,5 @@
 }
 
 .text-large-bold {
-  @apply text-[150px] font-bold leading-normal
+  @apply md:text-[150px] xs:text-[80px] font-bold leading-normal
 }

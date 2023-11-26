@@ -39,8 +39,8 @@ const PlanetPage = async ({ params: { name } }: PlanetPageProps) => {
 				/>
 			</div>
 			<div className='xs:flex xs:flex-col  xs:items-center lg:items-start'>
-				<p className='text-[100px]'>{planet?.name}</p>
-				<p className=' lg:px-0 xs:px-[100px]'>{planet?.description}</p>
+				<p className='md:text-[100px] xs:text-[70px]'>{planet?.name}</p>
+				<p className=' lg:px-0 md:px-[100px]'>{planet?.description}</p>
 				<div className='lg:mt-[30px] flex gap-[51px] xs:mt-[70px] lg:mb-0 xs:mb-[50px]'>
 					<div className='flex flex-col gap-3 '>
 						<p>AVG. DISTANCE</p>

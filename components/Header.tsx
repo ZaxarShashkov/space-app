@@ -16,8 +16,8 @@ const Header = (props: Props) => {
 					className='object-contain'
 				/>
 			</div>
-			<nav className='flex justify-center items-center lg:min-w-[830px] md:min-w-[550px] h-[93px] bg-header-bg backdrop-blur-[42px] '>
-				<ul className='flex justify-center lg:gap-12 md:gap-8 text-base text-white'>
+			<nav className='flex justify-center items-center lg:min-w-[830px] md:min-w-[550px] h-[93px] bg-header-bg backdrop-blur-[42px] md:visible xs:invisible'>
+				<ul className='flex justify-center lg:gap-12 md:gap-8 text-base text-white '>
 					<Link href='/'>
 						<li>
 							<span className='font-bold'>00</span> HOME

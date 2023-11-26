@@ -12,7 +12,7 @@ const DestinationLayout = ({ children }: { children: React.ReactNode }) => {
 			<Header />
 			<div className='lg:grid lg:grid-cols-2 mx-[70px] xs:flex xs:flex-col items-center justify-center'>
 				<div className='mt-[30px]'>
-					<p className='text-[28px] text-white'>
+					<p className='md:text-[28px] xs:text-xl text-white'>
 						<span className='font-bold'>01 </span>
 						PICK YOUR DESTINATION
 					</p>

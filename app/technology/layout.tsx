@@ -12,7 +12,7 @@ const TechnologyLayout = ({ children }: { children: React.ReactNode }) => {
 			<Header />
 			<div className='mt-[30px] mx-[90px]'>
 				<p className='text-white text-[28px]'>
-					<span className='opacity-25 pr-[24px] font-bold'>02 </span>MEET YOUR CREW
+					<span className='opacity-25 pr-[24px] font-bold'>03 </span>SPACE LAUNCH 101
 				</p>
 			</div>
 			<div className='text-white grid grid-cols-[0.5fr,2fr,3fr] gap-[100px] ml-[90px] mt-[50px]'>
