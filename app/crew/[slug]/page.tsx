@@ -27,13 +27,15 @@ const CrewPage = async ({ params: { slug } }: CrewPageProps) => {
 	const team = await getData(slug);
 
 	return (
-		<div className='grid grid-cols-2 text-white justfy-center mx-[100px] mt-[50px] '>
-			<div className=''>
+		<div className='lg:grid lg:grid-cols-2 text-white mx-[100px] mt-[50px] xs:flex xs:flex-col  '>
+			<div className='flex flex-col xs:items-center lg:items-start'>
 				<p className='text-white text-[28px]'>
 					<span className='opacity-25 pr-[24px] font-bold'>02 </span>MEET YOUR CREW
 				</p>
-				<p className='mt-[100px] opacity-50 text-[32px] uppercase'>{team?.post}</p>
-				<p className='mt-4 text-[56px] uppercase'>{team?.name}</p>
+				<p className='mt-[100px] opacity-50 lg:text-[32px] xs:text-[20px]  uppercase'>
+					{team?.post}
+				</p>
+				<p className='mt-4 lg:text-[56px] xs:text-[40px] uppercase'>{team?.name}</p>
 				<p className='mt-[27px] text-main-text'>{team?.descr}</p>
 				<ul className='flex gap-5 mt-10'>
 					{crew?.map((link) => (
@@ -49,7 +51,7 @@ const CrewPage = async ({ params: { slug } }: CrewPageProps) => {
 					))}
 				</ul>
 			</div>
-			<div className='object-contain flex justify-center lg:mt-[65px]'>
+			<div className='object-contain flex justify-center lg:mt-[65px] xs:mt-8'>
 				<Image
 					// @ts-ignore
 					src={team?.href}

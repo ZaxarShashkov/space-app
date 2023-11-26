@@ -32,7 +32,7 @@ const TechnologyPage = async ({ params: { slug } }: TechnologyPageProps) => {
 				<p className='text-[56px] my-3'>{technologies?.title}</p>
 				<p className='text-[18px] text-main-text'>{technologies?.descr}</p>
 			</div>
-			<div className='flex justify-end mt-[-50px]'>
+			<div className='flex justify-end mt-[-100px]'>
 				<Image
 					//@ts-ignore
 					src={technologies?.href}
@@ -40,7 +40,7 @@ const TechnologyPage = async ({ params: { slug } }: TechnologyPageProps) => {
 					alt={technologies?.title}
 					height={415}
 					width={427}
-					className='object-center'
+					className='object-contain'
 				/>
 			</div>
 		</>

@@ -8,14 +8,14 @@ const TechnologyLayout = ({ children }: { children: React.ReactNode }) => {
 	const pathname = usePathname();
 	console.log(pathname);
 	return (
-		<div className='bg-technology  bg-cover h-screen'>
+		<div className='bg-technology bg-cover lg:h-screen '>
 			<Header />
 			<div className='mt-[30px] mx-[90px]'>
 				<p className='text-white text-[28px]'>
 					<span className='opacity-25 pr-[24px] font-bold'>03 </span>SPACE LAUNCH 101
 				</p>
 			</div>
-			<div className='text-white grid grid-cols-[0.5fr,2fr,3fr] gap-[100px] ml-[90px] mt-[50px]'>
+			<div className='text-white grid grid-cols-[0.5fr,2fr,3fr] gap-[30px] ml-[90px] mt-[50px]'>
 				<div className=''>
 					<ul className='flex flex-col gap-[32px]'>
 						{technology.map((link, i) => {

@@ -4,10 +4,9 @@ import Link from 'next/link';
 
 const CrewLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
-		<div className='bg-crew  bg-cover h-screen lg:overflow-hidden'>
+		<div className='lg:bg-crew md:bg-crewTablet xs:bg-crewMobile  bg-cover  lg:overflow-hidden  lg:h-screen '>
 			<Header />
 			<div className=''>{children}</div>
-			
 		</div>
 	);
 };
