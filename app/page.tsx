@@ -20,9 +20,7 @@ export default function Home() {
 					<Link
 						className='w-[274px] h-[274px] bg-white  rounded-[100%] flex-center lg:mt-0 lg:mb-0 xs:mt-[259px] xs:mb-[142px]'
 						href={'/destination/moon'}>
-						<div className='w-[274px] h-[274px] bg-white  rounded-[100%] flex-center lg:mt-0 lg:mb-0 xs:mt-[259px] xs:mb-[142px]'>
-							<span className='block text-[32px] text-primary-black'>EXPLORE</span>
-						</div>
+						<span className='block text-[32px] text-primary-black'>EXPLORE</span>
 					</Link>
 				</div>
 			</div>

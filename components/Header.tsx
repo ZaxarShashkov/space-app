@@ -1,12 +1,19 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
+import Menu from './Menu';
 
-type Props = {};
+const Header = () => {
+	const [visible, setVisible] = useState<boolean>(false);
 
-const Header = (props: Props) => {
+	const handleClick = () => {
+		setVisible(!visible);
+	};
+
 	return (
-		<header className='relative flex justify-between items-center lg:pt-8'>
+		<header className='relative flex justify-between items-center lg:pt-8 xs:p-8'>
 			<div className='ml-8'>
 				<Image
 					src='/logo.svg'
@@ -16,7 +23,7 @@ const Header = (props: Props) => {
 					className='object-contain'
 				/>
 			</div>
-			<nav className='flex justify-center items-center lg:min-w-[830px] md:min-w-[550px] h-[93px] bg-header-bg backdrop-blur-[42px] md:visible xs:invisible'>
+			<nav className='justify-center items-center lg:min-w-[830px] md:min-w-[550px] h-[93px] bg-header-bg backdrop-blur-[42px] md:flex xs:hidden'>
 				<ul className='flex justify-center lg:gap-12 md:gap-8 text-base text-white '>
 					<Link href='/'>
 						<li>
@@ -40,6 +47,16 @@ const Header = (props: Props) => {
 					</Link>
 				</ul>
 			</nav>
+			<div className={`md:hidden  mr-5 ${visible ? 'xs:hidden' : 'xs:block'}`}>
+				<Image
+					src={'/icon-hamburger.svg'}
+					alt='hamburger'
+					width={30}
+					height={30}
+					onClick={handleClick}
+				/>
+			</div>
+			{visible ? <Menu /> : null}
 		</header>
 	);
 };
