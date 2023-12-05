@@ -44,6 +44,8 @@ module.exports = {
 				crewTablet: "url('/background-crew-tablet.jpg')",
 				crewMobile: "url('/background-crew-mobile.jpg')",
 				technology: "url('/background-technology-desktop.jpg')",
+				technologyTablet: "url('/background-technology-tablet.jpg')",
+				technologyMobile: "url('/background-technology-mobile.jpg')",
 			},
 		},
 	},

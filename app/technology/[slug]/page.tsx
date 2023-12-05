@@ -27,12 +27,12 @@ const TechnologyPage = async ({ params: { slug } }: TechnologyPageProps) => {
 	const technologies = await getData(slug);
 	return (
 		<>
-			<div className=''>
+			<div className='flex flex-col justify-center items-center xs:mt-10 xs:p-10 lg:mt-0 lg:p-0 lg:block'>
 				<p className='text-main-text'>THE TERMINOLOGY…</p>
-				<p className='text-[56px] my-3'>{technologies?.title}</p>
+				<p className='text-[56px] my-7'>{technologies?.title}</p>
 				<p className='text-[18px] text-main-text'>{technologies?.descr}</p>
 			</div>
-			<div className='flex justify-end mt-[-100px]'>
+			<div className='xs:flex lg:justify-end xs:justify-center xs:items-center lg:mt-[-100px] xs:pb-5 lg:pb-0 '>
 				<Image
 					//@ts-ignore
 					src={technologies?.href}
